@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: timeserver-container
-        image: docker.io/wdenniss/timeserver:1
+        image: europe-southwest1-docker.pkg.dev/codexperiences/ts/timeserver:1
