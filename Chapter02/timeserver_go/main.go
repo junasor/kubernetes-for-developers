@@ -16,7 +16,7 @@ func main() {
 	// use PORT environment variable, or default to 80
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		port = "80"
 	}
 
 	// start the web server on port and accept requests
@@ -25,7 +25,7 @@ func main() {
 }
 
 func getTime(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Serving request: %s", r.URL.Path)
+	log.Printf("Serving http request: %s", r.URL.Path)
 	host, _ := os.Hostname()
 	fmt.Fprintf(w, "The time is  %s, UTC\n", time.Now().UTC().Format("3:04 PM"))
 	fmt.Fprintf(w, "Hostname: %s\n", host)
