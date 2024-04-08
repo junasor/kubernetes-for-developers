@@ -20,8 +20,7 @@ func main() {
 	}
 
 	// start the web server on port and accept requests
-	log.Printf("Server listening on port %s", port)
-	log.Printf("Quien cohones soy.")
+	log.Printf("GO Server listening on port %s", port)
 	log.Fatal(http.ListenAndServe(":"+port, mux))
 }
 
