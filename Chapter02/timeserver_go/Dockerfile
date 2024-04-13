@@ -4,8 +4,8 @@ RUN go mod init timeserver
 COPY *.go ./
 RUN CGO_ENABLED=0 GOOS=linux go build -o /timeserver
 
-#FROM gcr.io/distroless/base-debian11
-FROM alpine:latest
+FROM gcr.io/distroless/base-debian12
+#FROM alpine:latest
 WORKDIR /
 COPY --from=builder /timeserver /timeserver
 ENV PORT 80

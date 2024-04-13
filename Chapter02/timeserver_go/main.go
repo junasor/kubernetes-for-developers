@@ -25,7 +25,7 @@ func main() {
 }
 
 func getTime(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Serving http request: %s", r.URL.Path)
+	log.Printf("Serving request: %s", r.URL.Path)
 	host, _ := os.Hostname()
 	fmt.Fprintf(w, "The time is  %s, UTC\n", time.Now().UTC().Format("3:04 PM"))
 	fmt.Fprintf(w, "Hostname: %s\n", host)
